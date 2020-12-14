@@ -20,7 +20,10 @@ feature 'user can search for specific food' do
     click_on "Search"
     expect(current_path).to eq(foods_path)
 
-    expect(page).to have_content(10)
+    within ".total" do
+    expect(page).to have_content(50)
+    end
+    
     expect(page).to have_content("070560951975")
     expect(page).to have_content("SWEET POTATOES")
     expect(page).to have_content("The Pictsweet Company")

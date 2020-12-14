@@ -1,5 +1,7 @@
 <h2> Total number of results for <%= @food %>:</h2>
-<h3> <%= @foods.take(10).count %></h3>
+<div class="total">
+<h3> <%= @foods.count %></h3>
+</div>
 <ul>
   <% @foods.take(10).each do |food| %>
   <li>
