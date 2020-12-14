@@ -14,7 +14,7 @@ feature 'user can search for specific food' do
 
     visit '/'
 
-    within ".search=field" do
+    within ".search-field" do
       fill_in :q, with: "sweet potatoes"
     end
     click_on "Search"
