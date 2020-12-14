@@ -1,0 +1,16 @@
+<h2> Total number of results for <%= @food %>:</h2>
+<h3> <%= @foods.take(10).count %></h3>
+<ul>
+  <% @foods.take(10).each do |food| %>
+  <li>
+    <p><b> GTIN/UPC:</b></p>
+    <%= food[:gtinUpc] %>
+    <p><b> Description:</b></p>
+    <%= food[:description] %>
+    <p><b> Brand:</b></p>
+    <%= food[:brandOwner] %>
+    <p><b> Ingredients:</b></p>
+    <%= food[:ingredients] %>
+  </li>
+  <% end %>
+</ul>
