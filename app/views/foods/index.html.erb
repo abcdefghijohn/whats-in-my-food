@@ -1,18 +1,17 @@
 <h2> Total number of results for <%= @food %>:</h2>
+<% require "pry"; binding.pry %>
 <div class="total">
 <h3> <%= @foods.count %></h3>
 </div>
 <ul>
-  <% @foods.take(10).each do |food| %>
   <li>
     <p><b> GTIN/UPC:</b></p>
-    <%= food[:gtinUpc] %>
+    <%= @foods.gtinUpc %>
     <p><b> Description:</b></p>
-    <%= food[:description] %>
+    <%= @foods.description %>
     <p><b> Brand:</b></p>
-    <%= food[:brandOwner] %>
+    <%= @foods.brand %>
     <p><b> Ingredients:</b></p>
-    <%= food[:ingredients] %>
+    <%= @foods.ingredients %>
   </li>
-  <% end %>
 </ul>
