@@ -3,7 +3,7 @@ class FoodService
     response = conn.get("/fdc/v1/foods/search?query=#{food}")
 
     json = JSON.parse(response.body, symbolize_names: true)
-    json[:foods].take(10)
+    json[:foods]
   end
 
   private
